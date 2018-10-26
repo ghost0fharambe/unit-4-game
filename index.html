@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Collector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div id="header-wrapper">
+        <h1 id="header-1">Crystal Collector!</h1>
+        <h3 id="header-2">Collect enough crystals to fill your bag!</h3>
+    </div>
+
+    <div id="rules-wrapper">
+        <p class="rules">At the start of the game you will be given a randomly sized bag.</p>
+        <p class="rules">Your goal is to collect just enough crystal to fill your bag.</p>
+        <p class="rules">But, you can only collect crystals in batches, not one at a time</p>
+        <p class="rules">You must figure out how you will fill up your bag!</p>
+        <p class="rules">If you go over your limit, you lose!</p>
+    </div>
+
+    <div id="counter-wrapper">
+        <div id="bag">
+            <p id="bag-size">You can fit<span id="bag-number"> </span>crystals in this bag!</p>
+        </div>
+
+        <div id="wins-losses">
+            <p id="wins">Wins: </p>
+            <p id="losses">Losses: </p>
+        </div>
+    </div>
+
+    <div id="crystal-wrapper">
+        <img src="assets/images/Agate-icon.png" alt="agate" height="200px" width="200px" />
+        <img src="assets/images/App-ksokoban-ruby-icon.png" alt="ruby-2" height="200px" width="200px" />
+        <img src="assets/images/diamond-icon.png" alt="diamond" height="200px" width="200px" />
+        <img src="assets/images/ruby-icon.png" alt="ruby-1" height="200px" width="200px" />
+    </div>
+
+    <div id="score-wrapper">
+        <p id="score-text">You have this many Crystals in your bag!</p>
+        <p id="score-number"></p>
+    </div>
+
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
