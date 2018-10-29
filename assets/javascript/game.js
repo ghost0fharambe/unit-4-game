@@ -3,6 +3,8 @@ var wins = 0;
 var losses = 0;
 var score = 0;
 
+
+
 //Empty variable to be set by function
 var bagSize = "";
 
@@ -62,8 +64,46 @@ function populateBagSize() {
 
     console.log(bagSize);
     //}
+    bagSizeText.text(" " + bagSize + " ");
 
 };
+
+function reset() {
+    setCrystalValue();
+    populateBagSize();
+};
+
+scoreText.text("0");
+
+$('.crystal').on("click", function () {
+
+    var crystalPoints = ($(this).attr("data-value"));
+    crystalPoints = parseInt(crystalPoints);
+    score += crystalPoints;
+    scoreText.text(score)
+
+    alert("New score: " + score);
+
+    if (score === bagSize) {
+        alert("You win!");
+        wins++;
+        winText.text("Wins: " + wins);
+        score = 0;
+        scoreText.text(score)
+        reset();
+    }
+
+    else if (score >= bagSize) {
+        alert("You lose!!");
+        losses++;
+        loseText.text("Losses: " + losses);
+        score = 0;
+        scoreText.text(score);
+        reset();
+    };
+
+});
+
 
 populateBagSize();
 

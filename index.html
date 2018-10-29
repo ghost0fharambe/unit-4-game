@@ -5,49 +5,59 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Crystal Collector</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" /> -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 </head>
 
-<body>
-    <div id="header-wrapper">
+<body background="assets/images/qbkls/qbkls/qbkls.png">
+    <div id="header-wrapper" class="jumbotron text-center">
         <h1 id="header-1">Crystal Collector!</h1>
         <h3 id="header-2">Collect enough crystals to fill your bag!</h3>
     </div>
 
-    <div id="rules-wrapper">
-        <p class="rules">At the start of the game you will be given a randomly sized bag.</p>
-        <p class="rules">Your goal is to collect just enough crystal to fill your bag.</p>
-        <p class="rules">But, you can only collect crystals in batches, not one at a time</p>
-        <p class="rules">You must figure out how you will fill up your bag!</p>
-        <p class="rules">If you go over your limit, you lose!</p>
+    <div id="rules-wrapper" class="card bg-secondary text-center text-light">
+        <h3 class="card-header bg-info">Instructions</h3>
+        <div class="card-body">
+            <p class="rules">At the start of the game you will be given a randomly sized bag.</p>
+            <p class="rules">Your goal is to collect just enough crystal to fill your bag.</p>
+            <p class="rules">But, you can only collect crystals in batches, not one at a time</p>
+            <p class="rules">You must figure out how you will fill up your bag!</p>
+            <p class="rules">If you go over your limit, you lose!</p>
+        </div>
     </div>
 
-    <div id="counter-wrapper">
+    <div id="counter-wrapper" class="text-center bg-secondary text-white">
         <div id="bag">
-            <p id="bag-size">You can fit<span id="bag-number"> </span>crystals in this bag!</p>
+            <div id="wins-losses" class="text-center">
+                <p id="wins">Wins: </p>
+                <p id="losses">Losses: </p>
+            </div>
         </div>
-
-        <div id="wins-losses">
-            <p id="wins">Wins: </p>
-            <p id="losses">Losses: </p>
+        <p id="bag-size">You can fit<span id="bag-number"> </span>crystals in this bag!</p>
+        <div id="score-wrapper" class="text-center">
+            <p id="score-text">You have this many Crystals in your bag!</p>
+            <p id="score-number"></p>
         </div>
     </div>
 
-    <div id="crystal-wrapper">
+    <div id="crystal-wrapper" class="text-center bg-dark" style="padding-top: 50px; padding-bottom: 75px;">
         <img class="crystal" id="ruby-1" src="assets/images/ruby-icon.png" alt="ruby-1" height="200px" width="200px" />
         <img class="crystal" id="diamond" src="assets/images/diamond-icon.png" alt="diamond" height="200px" width="200px" />
         <img class="crystal" id="agate" src="assets/images/Agate-icon.png" alt="agate" height="200px" width="200px" />
-        <img class="crystal" id="ruby-2" src="assets/images/App-ksokoban-ruby-icon.png" alt="ruby-2" height="200px" width="200px" />
+        <img class="crystal" id="ruby-2" src="assets/images/App-ksokoban-ruby-icon.png" alt="ruby-2" height="200px"
+            width="200px" />
     </div>
-
-    <div id="score-wrapper">
-        <p id="score-text">You have this many Crystals in your bag!</p>
-        <p id="score-number"></p>
-    </div>
+    <br />
+    <footer class="footer text-center bg-info">
+        <div class="container">
+            <span class="text-white">&copy; 2018 | Adam Karman</span>
+        </div>
+    </footer>
 
     <script src="assets/javascript/game.js"></script>
 </body>
