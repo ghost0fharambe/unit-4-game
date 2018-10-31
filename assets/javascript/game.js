@@ -58,7 +58,7 @@ function populateBagSize() {
 
     //for (var i = 1; i <= 10; i++) {
 
-    bagSize = Math.round(Math.random() * 50 + 10);
+    bagSize = Math.round(Math.random() * 101 + 19);
 
     //bagSizeArray.push(bagSizes);
 
@@ -82,23 +82,23 @@ $('.crystal').on("click", function () {
     score += crystalPoints;
     scoreText.text(score)
 
-    alert("New score: " + score);
-
     if (score === bagSize) {
-        alert("You win!");
+
         wins++;
         winText.text("Wins: " + wins);
         score = 0;
         scoreText.text(score)
+        alert("You win!");
         reset();
     }
 
     else if (score >= bagSize) {
-        alert("You lose!!");
+
         losses++;
         loseText.text("Losses: " + losses);
         score = 0;
         scoreText.text(score);
+        alert("You lose!!");
         reset();
     };
 

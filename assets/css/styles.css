@@ -17,3 +17,11 @@ body {
 #counter-wrapper {
     padding: 1px;
 }
+
+#score-number {
+  font-size: 100px;
+}
+
+#score-text {
+  margin: 0px;
+}
